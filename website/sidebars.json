@@ -1,8 +1,6 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "React Topics": ["react-basics", "react-router", "react-internationalization", "react-testing", "redux", "react-native", "supported-libs-and-integration", "miscellaneous"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
