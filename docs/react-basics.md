@@ -313,7 +313,7 @@ You can use either *if statements* or *ternary expressions* which are available 
 }
 ```
 
-## 18. What are "key" props and what is the benefit of using them in arrays of elements?
+## 18. What are key props and what is the benefit of using them in arrays of elements?
 
 A `key` is a special string attribute you **should** include when creating arrays of elements. *Keys* help React identify which items have changed, are added, or are removed.
 
