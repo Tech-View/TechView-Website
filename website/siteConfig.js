@@ -50,8 +50,8 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/techView200_100.png',
-  footerIcon: 'img/techview150_100.png',
+  headerIcon: 'img/logo_icon.svg',
+  footerIcon: 'img/logo_icon.svg',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
