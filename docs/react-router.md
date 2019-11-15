@@ -4,15 +4,15 @@ title: React Router
 sidebar_label: React Router
 ---
 
-## 129. What is React Router?
+## . What is React Router?
 
 React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
 
-## 130. How React Router is different from history library?
+## . How React Router is different from history library?
 
 React Router is a wrapper around the `history` library which handles interaction with the browser's `window.history` with its browser and hash histories. It also provides memory history which is useful for environments that don't have global history, such as mobile app development (React Native) and unit testing with Node.
 
-## 131. What are the `<Router>` components of React Router v4?
+## . What are the `<Router>` components of React Router v4?
 
 React Router v4 provides below 3 `<Router>` components:
 
@@ -22,7 +22,7 @@ React Router v4 provides below 3 `<Router>` components:
 
 The above components will create *browser*, *hash*, and *memory* history instances. React Router v4 makes the properties and methods of the `history` instance associated with your router available through the context in the `router` object.
 
-## 132. What is the purpose of `push()` and `replace()` methods of `history`?
+## . What is the purpose of `push()` and `replace()` methods of `history`?
 
 A history instance has two methods for navigation purpose.
 
@@ -31,7 +31,7 @@ A history instance has two methods for navigation purpose.
 
 If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
 
-## 133. How do you programmatically navigate using React Router v4?
+## . How do you programmatically navigate using React Router v4?
 
 There are three different ways to achieve programmatic routing/navigation within components.
 
@@ -94,7 +94,7 @@ There are three different ways to achieve programmatic routing/navigation within
     }
     ```
 
-## 134. How to get query parameters in React Router v4?
+## . How to get query parameters in React Router v4?
 
 The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
 
@@ -112,7 +112,7 @@ const foo = params.get('name')
 
 You should use a *polyfill* for IE11.
 
-## 135. Why you get "Router may have only one child element" warning?
+## . Why you get "Router may have only one child element" warning?
 
 You have to wrap your Route's in a `<Switch>` block because `<Switch>` is unique in that it renders a route exclusively.
 
@@ -133,7 +133,7 @@ Then define the routes within `<Switch>` block:
 </Router>
 ```
 
-## 136. How to pass params to `history.push` method in React Router v4?
+## . How to pass params to `history.push` method in React Router v4?
 
 While navigating you can pass props to the `history` object:
 
@@ -147,7 +147,7 @@ this.props.history.push({
 
 The `search` property is used to pass query params in `push()` method.
 
-## 137. How to implement *default* or *NotFound* page?
+## . How to implement *default* or *NotFound* page?
 
 A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
 
@@ -159,7 +159,7 @@ A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no
 </Switch>
 ```
 
-## 138. How to get history on React Router v4?
+## . How to get history on React Router v4?
 
 1. Create a module that exports a `history` object and import this module across the project.
 
@@ -196,7 +196,7 @@ A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no
     history.push('/go-here')
     ```
 
-## 139. How to perform automatic redirect after login?
+## . How to perform automatic redirect after login?
 
 The `react-router` package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
 
