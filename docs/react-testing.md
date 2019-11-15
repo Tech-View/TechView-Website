@@ -4,7 +4,7 @@ title: React Testing
 sidebar_label: React Testing
 ---
 
-## 146. What is Shallow Renderer in React testing?
+## . What is Shallow Renderer in React testing?
 
 *Shallow rendering* is useful for writing unit test cases in React. It lets you render a component *one level deep* and assert facts about what its render method returns, without worrying about the behavior of child components, which are not instantiated or rendered.
 
@@ -39,7 +39,7 @@ expect(result.props.children).toEqual([
 ])
 ```
 
-## 147. What is `TestRenderer` package in React?
+## . What is `TestRenderer` package in React?
 
 This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or `jsdom`.
 
@@ -60,15 +60,15 @@ console.log(testRenderer.toJSON())
 // }
 ```
 
-## 148. What is the purpose of ReactTestUtils package?
+## . What is the purpose of ReactTestUtils package?
 
 *ReactTestUtils* are provided in the `with-addons` package and allow you to perform actions against a simulated DOM for the purpose of unit testing.
 
-## 149. What is Jest?
+## . What is Jest?
 
 *Jest* is a JavaScript unit testing framework created by Facebook based on Jasmine and provides automated mock creation and a `jsdom` environment. It's often used for testing components.
 
-## 150. What are the advantages of Jest over Jasmine?
+## . What are the advantages of Jest over Jasmine?
 
 There are couple of advantages compared to Jasmine:
 
@@ -78,7 +78,7 @@ There are couple of advantages compared to Jasmine:
 - Runs your tests with a fake DOM implementation (via `jsdom`) so that your tests can be run on the command line.
 - Runs tests in parallel processes so that they finish sooner.
 
-## 151. Give a simple example of Jest test case
+## . Give a simple example of Jest test case
 
 Let's write a test for a function that adds two numbers in `sum.js` file:
 

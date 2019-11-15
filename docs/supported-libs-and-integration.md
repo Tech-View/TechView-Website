@@ -4,21 +4,21 @@ title: React Supported Libraries & Integration
 sidebar_label: React Supported Libraries & Integration
 ---
 
-## 192. What is reselect and how does it work?
+## . What is reselect and how does it work?
 
 *Reselect* is a **selector library** (for Redux) which uses *memoization* concept. It was originally written to compute derived data from Redux-like applications state, but it can't be tied to any architecture or library.
 
 Reselect keeps a copy of the last inputs/outputs of the last call, and recomputes the result only if one of the inputs changes. If the the same inputs are provided twice in a row, Reselect returns the cached output. It's memoization and cache are fully customizable.
 
-## 193. What is Flow?
+## . What is Flow?
 
 *Flow* is a *static type checker* designed to find type errors in JavaScript. Flow types can express much more fine-grained distinctions than traditional type systems. For example, Flow helps you catch errors involving `null`, unlike most type systems.
 
-## 194. What is the difference between Flow and PropTypes?
+## . What is the difference between Flow and PropTypes?
 
 Flow is a *static analysis tool* (static checker) which uses a superset of the language, allowing you to add type annotations to all of your code and catch an entire class of bugs at compile time. PropTypes is a *basic type checker* (runtime checker) which has been patched onto React. It can't check anything other than the types of the props being passed to a given component. If you want more flexible typechecking for your entire project Flow/TypeScript are appropriate choices.
 
-## 195. How to use Font Awesome icons in React?
+## . How to use Font Awesome icons in React?
 
 Follow the steps below to include Font Awesome in React:
 
@@ -42,7 +42,7 @@ render() {
 }
 ```
 
-## 196. What is React Dev Tools?
+## . What is React Dev Tools?
 
 *React Developer Tools* let you inspect the component hierarchy, including component props and state. It exists both as a browser extension (for Chrome and Firefox), and as a standalone app (works with other environments including Safari, IE, and React Native).
 
@@ -51,11 +51,11 @@ The official extensions available for different browsers or environments.
 2. **Firefox extension**
 3. **Standalone app** (Safari, React Native, etc)
 
-## 197. Why is DevTools not loading in Chrome for local files?
+## . Why is DevTools not loading in Chrome for local files?
 
 If you opened a local HTML file in your browser (`file://...`) then you must first open *Chrome Extensions* and check `Allow access to file URLs`.
 
-## 198. How to use Polymer in React?
+## . How to use Polymer in React?
 
 1. Create a Polymer element:
 
@@ -75,7 +75,7 @@ If you opened a local HTML file in your browser (`file://...`) then you must fir
     <link rel='import' href='./src/polymer-components/calender-element.html'>
     ```
 
-    3. Use that element in the JSX file:
+    1. Use that element in the JSX file:
 
     ```javascript
     import React from 'react'
@@ -91,7 +91,7 @@ If you opened a local HTML file in your browser (`file://...`) then you must fir
     export default MyComponent
     ```
 
-## 199. What are the advantages of React over Vue.js?
+## . What are the advantages of React over Vue.js?
 
 React has the following advantages over Vue.js:
 
@@ -100,7 +100,7 @@ React has the following advantages over Vue.js:
 3. Suitable for mobile apps creating.
 4. More information and solutions available.
 
-## 200. What is the difference between React and Angular?
+## . What is the difference between React and Angular?
 
 | React | Angular |
 | ----- | ------- |
@@ -110,15 +110,15 @@ React has the following advantages over Vue.js:
 | React Native, which is a React type to build mobile applications are faster and more stable | Ionic, Angular's mobile native app is relatively less stable and slower |
 | In React, data flows only in one way and hence debugging is easy | In Angular, data flows both way i.e it has two-way data binding between children and parent and hence debugging is often difficult |
 
-## 201. Why React tab is not showing up in DevTools?
+## . Why React tab is not showing up in DevTools?
 
 When the page loads, *React DevTools* sets a global named `__REACT_DEVTOOLS_GLOBAL_HOOK__`, then React communicates with that hook during initialization. If the website is not using React or if React fails to communicate with DevTools then it won't show up the tab.
 
-## 202. What are Styled Components?
+## . What are Styled Components?
 
 `styled-components` is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.
 
-## 203. Give an example of Styled Components?
+## . Give an example of Styled Components?
 
 Lets create `<Title>` and `<Wrapper>` components with specific styles for each.
 
@@ -148,11 +148,11 @@ These two variables, `Title` and `Wrapper`, are now components that you can rend
 </Wrapper>
 ```
 
-## 204. What is Relay?
+## . What is Relay?
 
 Relay is a JavaScript framework for providing a data layer and client-server communication to web applications using the React view layer.
 
-## 205. How to use TypeScript in `create-react-app` application?
+## . How to use TypeScript in `create-react-app` application?
 Starting from react-scripts@2.1.0 or higher, there is a built-in support for typescript. You can just pass `--typescript` option as below
 ```bash
 npx create-react-app my-app --typescript
