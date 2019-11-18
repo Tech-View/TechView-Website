@@ -64,7 +64,6 @@ const siteConfig = {
   },
 
   /* Custom fonts for website */
-  
   fonts: {
     primaryFont: [
       "Raleway",
@@ -76,7 +75,6 @@ const siteConfig = {
     ]
   },
   
-
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} TechView`,
 
@@ -97,19 +95,8 @@ const siteConfig = {
   ogImage: 'img/og_image.png',
   twitterImage: 'img/undraw_tweetstorm.svg',
 
-  // For sites with a sizable amount of content, set collapsible to true.
-  // Expand/collapse the links and subcategories under categories.
-  // docsSideNavCollapsible: true,
-
-  // Show documentation's last contributor's name.
-  // enableUpdateBy: true,
-
   // Show documentation's last update time.
-  // enableUpdateTime: true,
-
-  // You may provide arbitrary config keys to be used as needed by your
-  // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  enableUpdateTime: true
 };
 
 module.exports = siteConfig;
