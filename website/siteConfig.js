@@ -21,35 +21,38 @@ const users = [
 ];
 
 const siteConfig = {
-
+  // Used for publishing and more
+  // For top-level user or org sites, the organization is still the same.
+  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
+  // matches organization username
+  organizationName: 'Tech-View',
+  // matches project repo
+  projectName: 'TechView-Website',
   title: 'TechView', // Title for your website.
   tagline: 'Technical Interview Questions & Answers',
-  url: 'https://techview.dev', // Your website URL
-
-  baseUrl: '/', // Base URL for your project */
+  // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
+  url: 'https://techview.dev', // Your website URL
+  baseUrl: '/', 
 
-  // Used for publishing and more
-  projectName: 'TechView',
-  organizationName: 'TechView',
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
+  // remove the title from header logo
+  disableHeaderTitle : true,
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'react-basics', label: 'React'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {href: "https://github.com/Tech-View/TechView-Website", label: "GitHub"},
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/logo_icon.svg',
+  headerIcon: 'img/techView200_100.png',
   footerIcon: 'img/logo_icon-gold.svg',
   favicon: 'img/favicon.ico',
 
@@ -57,6 +60,7 @@ const siteConfig = {
   colors: {
     primaryColor: '#FACD00',
     secondaryColor: '#313538',
+    whiteColor: '#fff'
   },
 
   /* Custom fonts for website */
