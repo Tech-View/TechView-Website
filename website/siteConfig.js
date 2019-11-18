@@ -41,7 +41,6 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'react-basics', label: 'React'},
-    //{doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
@@ -51,20 +50,20 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/logo_icon.svg',
-  footerIcon: 'img/logo_icon.svg',
+  footerIcon: 'img/logo_icon-gold.svg',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#786602',
-    secondaryColor: '#544701',
+    primaryColor: '#FACD00',
+    secondaryColor: '#313538',
   },
 
   /* Custom fonts for website */
-  /*
+  
   fonts: {
     myFont: [
-      "Times New Roman",
+      "Raleway",
       "Serif"
     ],
     myOtherFont: [
@@ -72,10 +71,10 @@ const siteConfig = {
       "system-ui"
     ]
   },
-  */
+  
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} TechView`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
