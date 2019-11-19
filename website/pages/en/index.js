@@ -137,23 +137,29 @@ class Index extends React.Component {
       </Block>
     );
 
-    const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
-          },
-          {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
-          },
-        ]}
-      </Block>
+    const Information = () => (
+      <Container>
+        <GridBlock
+          align="left"
+          contents={[
+            {
+              title: 'Why TechView!?',
+              content: `TechView contains more than +300 questions that you
+              may be asked in interview in different technologies
+              eg: JavaScript, React.js, DataStructure, Algorithmes
+              and more...`
+            },
+            {
+              title: 'Who understands the maintenance?',
+              content: `TechView is an open source project that mean you
+              can work on it all you need to check roles of
+              contributions and start editing for more information
+              check contribution page.`
+            },
+          ]}
+          layout='twoColumn'
+        />
+      </Container>
     );
 
     const Showcase = () => {
@@ -189,7 +195,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
+          <Information />
           <FeatureCallout />
           <LearnHow />
           <TryOut />
