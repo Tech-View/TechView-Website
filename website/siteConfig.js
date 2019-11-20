@@ -95,6 +95,9 @@ const siteConfig = {
   ogImage: 'img/og_image.png',
   twitterImage: 'img/undraw_tweetstorm.svg',
 
+  // Show documentation's last contributor's name.
+  enableUpdateBy: true,
+
   // Show documentation's last update time.
   enableUpdateTime: true
 };
