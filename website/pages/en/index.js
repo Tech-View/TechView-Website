@@ -143,18 +143,13 @@ class Index extends React.Component {
           align="left"
           contents={[
             {
-              title: 'Why TechView!?',
-              content: `TechView contains more than +300 questions that you
-              may be asked in interview in different technologies
-              eg: JavaScript, React.js, DataStructure, Algorithmes
-              and more...`
+              title: 'About TechView',
+              content: `TechView contains +300 React Interview Questions in different React Topics, and we are working on adding more technologies
+              eg: JavaScript, DataStructure, Algorithmes, and more!`
             },
             {
-              title: 'Who understands the maintenance?',
-              content: `TechView is an open source project that mean you
-              can work on it all you need to check roles of
-              contributions and start editing for more information
-              check contribution page.`
+              title: 'Who we are?',
+              content: `TechView is an Open-Source Project, available for anyone to add more questions, edit existing ones, or even add new technologies!`
             },
           ]}
           layout='twoColumn'
