@@ -1,16 +1,25 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (max-width: 1023px) {}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1500px) {}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
 }
 
-@media only screen and (min-width: 1024px) {
+.team .team_member {
+    text-align: center;
 }
 
-@media only screen and (max-width: 1023px) {
-}
-
-@media only screen and (min-width: 1400px) {
-}
-
-@media only screen and (min-width: 1500px) {
+.team .team_member a {
+    margin: 0 0.5rem;
 }

@@ -83,15 +83,73 @@ class Index extends React.Component {
         />
       </Container>
     );
+    
+    const MediaLink = props => {
+      if (props.iconSource) {
+        return (
+          <a href={props.url} target="_blank" rel="noreferrer noopener">
+            <img
+              style={{ marginRight: 4 }}
+              height={props.size}
+              width={props.size}
+              src={props.iconSource}
+              alt={props.iconAlt}
+            />
+          </a>
+        );
+      } else return null;
+    };
+    
+    const MediaObject = ({ member }) => {
+      const { github, twitter, name, orgs, areas } = member;
+      const avatarUrl = `https://avatars.githubusercontent.com/${github}`;
+      const twitterUrl = `https://twitter.com/${twitter}`;
+      const githubUrl = `https://github.com/${github}`;
+      return (
+        <div className="team_member">
+          <img src={avatarUrl} height="200" width="200" alt={name} />
+          <div className="member_info">
+            <h5 style={{ fontWeight: 600 }}>{name}</h5>
+            <MediaLink
+              iconAlt="github"
+              iconSource="/img/icons/github.svg"
+              size="20"
+              url={githubUrl}
+              text={github}
+            />
+            <MediaLink
+              iconAlt="twitter"
+              iconSource="/img/icons/twitter.svg"
+              size="20"
+              url={twitterUrl}
+              text={twitter}
+            />
+          </div>
+        </div>
+      );
+    };
 
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
-    );
+    const MemberSection = props => {
+      return (
+        props.members.map(member => {
+          return <MediaObject key={member.github} member={member} />;
+        })
+      )
+    };
+
+    class Team extends React.Component {
+      render() {
+        const team = siteConfig.team;
+        return (
+          <Container padding={["bottom"]}>
+            <h3 style={{textAlign:"center"}}>Meat our Team</h3>
+            <div className="team">
+              <MemberSection members={team.core} />
+            </div>
+          </Container>
+        );
+      }
+    }
 
     const TryOut = () => (
       <Block id="try">
@@ -191,7 +249,7 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Information />
-          <FeatureCallout />
+          <Team />
           <LearnHow />
           <TryOut />
           <Description />

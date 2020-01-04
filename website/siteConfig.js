@@ -20,7 +20,20 @@ const users = [
   },
 ];
 
+// Parse Yaml
+const parseYaml = require("js-yaml").safeLoad;
+const path = require("path");
+const fs = require("fs");
+const url = require("url");
+
+function loadYaml(fsPath) {
+  return parseYaml(fs.readFileSync(path.join(__dirname, fsPath), "utf8"));
+};
+// move to website/data later
+const team = loadYaml("./data/team.yml");
+
 const siteConfig = {
+  team,
   // Used for publishing and more
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
