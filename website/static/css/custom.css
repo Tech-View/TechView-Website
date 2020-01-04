@@ -23,3 +23,29 @@
 .team .team_member a {
     margin: 0 0.5rem;
 }
+
+@media screen and (max-width: 576px){
+    .team {
+        flex-direction: column;
+    }
+    
+    .team .team_member {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .team {
+        flex-wrap: wrap;
+    }
+
+    .team .team_member {
+        margin: 1rem 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .team .team_member {
+        margin: 1rem 0.3rem;
+    }
+}
