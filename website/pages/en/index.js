@@ -250,10 +250,10 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Information />
           <Team />
-          <LearnHow />
+          {/* <LearnHow />
           <TryOut />
-          <Description />
-          <Showcase />
+          <Description /> 
+          <Showcase />*/}
         </div>
       </div>
     );
