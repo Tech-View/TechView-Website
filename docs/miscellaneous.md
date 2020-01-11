@@ -506,7 +506,7 @@ The granularity of error boundaries usage is up to the developer based on the pr
 ## . What is the benefit of component stack trace from error boundary?
 Apart from error messages and javascript stack, React16 will display the component stack trace with file names and line numbers using error boundary concept. For example, BuggyCounter component displays the component stack trace as below:
 
-![stacktrace](images/error_boundary.png)
+![stacktrace](assets/error_boundary.png)
 
 ## . What is the required method to be defined for a class component?
 The render() method is the only required method in a class component. i.e, All methods other than render method are optional for a class component.

@@ -140,7 +140,7 @@ class User extends React.Component {
 }
 ```
 
-![state](images/state.jpg)
+![state](assets/state.jpg)
 
 State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any component other than the one that owns and sets it.
 
@@ -474,13 +474,13 @@ The *Virtual DOM* (VDOM) is an in-memory representation of *Real DOM*. The repre
 The *Virtual DOM* works in three simple steps.
 
 1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
-  ![vdom](images/vdom1.png)
+  ![vdom](assets/vdom1.png)
 
 2. Then the difference between the previous DOM representation and the new one is calculated.
-  ![vdom2](images/vdom2.png)
+  ![vdom2](assets/vdom2.png)
 
 3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
-  ![vdom3](images/vdom3.png)
+  ![vdom3](assets/vdom3.png)
 
 ## . What is the difference between Shadow DOM and Virtual DOM?
 
@@ -569,11 +569,11 @@ It's worth mentioning that React internally has a concept of phases when applyin
 
 React 16.3+ Phases (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
 
-![phases 16.3+](images/phases16.3.jpg)
+![phases 16.3+](assets/phases16.3.jpg)
 
 Before React 16.3
 
-![phases 16.2](images/phases.png)
+![phases 16.2](assets/phases.png)
 
 
 ## . What are the lifecycle methods of React?

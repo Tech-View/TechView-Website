@@ -10,7 +10,7 @@ sidebar_label: React Redux
 
 The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
 
-![flux](images/flux.png)
+![flux](assets/flux.png)
 
 ## . What is Redux?
 

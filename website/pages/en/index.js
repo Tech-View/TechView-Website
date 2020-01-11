@@ -24,7 +24,7 @@ class HomeSplash extends React.Component {
     const SplashContainer = props => (
       <div className="homeContainer">
         <div className="homeSplashFade">
-          <div className="wrapper homeWrapper">{props.children}</div>
+          {props.children}
         </div>
       </div>
     );
@@ -60,15 +60,7 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
-        <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
-          </PromoSection>
-        </div>
+        <img src={`${baseUrl}img/og_image.png`} alt="Project Logo" />
       </SplashContainer>
     );
   }
@@ -91,15 +83,73 @@ class Index extends React.Component {
         />
       </Container>
     );
+    
+    const MediaLink = props => {
+      if (props.iconSource) {
+        return (
+          <a href={props.url} target="_blank" rel="noreferrer noopener">
+            <img
+              style={{ marginRight: 4 }}
+              height={props.size}
+              width={props.size}
+              src={props.iconSource}
+              alt={props.iconAlt}
+            />
+          </a>
+        );
+      } else return null;
+    };
+    
+    const MediaObject = ({ member }) => {
+      const { github, twitter, name, orgs, areas } = member;
+      const avatarUrl = `https://avatars.githubusercontent.com/${github}`;
+      const twitterUrl = `https://twitter.com/${twitter}`;
+      const githubUrl = `https://github.com/${github}`;
+      return (
+        <div className="team_member">
+          <img src={avatarUrl} height="200" width="200" alt={name} />
+          <div className="member_info">
+            <h5 style={{ fontWeight: 600 }}>{name}</h5>
+            <MediaLink
+              iconAlt="github"
+              iconSource="/img/icons/github.svg"
+              size="20"
+              url={githubUrl}
+              text={github}
+            />
+            <MediaLink
+              iconAlt="twitter"
+              iconSource="/img/icons/twitter.svg"
+              size="20"
+              url={twitterUrl}
+              text={twitter}
+            />
+          </div>
+        </div>
+      );
+    };
 
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
-    );
+    const MemberSection = props => {
+      return (
+        props.members.map(member => {
+          return <MediaObject key={member.github} member={member} />;
+        })
+      )
+    };
+
+    class Team extends React.Component {
+      render() {
+        const team = siteConfig.team;
+        return (
+          <Container padding={["bottom"]}>
+            <h3 style={{textAlign:"center"}}>Meat our Team</h3>
+            <div className="team">
+              <MemberSection members={team.core} />
+            </div>
+          </Container>
+        );
+      }
+    }
 
     const TryOut = () => (
       <Block id="try">
@@ -145,23 +195,24 @@ class Index extends React.Component {
       </Block>
     );
 
-    const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
-          },
-          {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
-          },
-        ]}
-      </Block>
+    const Information = () => (
+      <Container>
+        <GridBlock
+          align="left"
+          contents={[
+            {
+              title: 'About TechView',
+              content: `TechView contains +300 React Interview Questions in different React Topics, and we are working on adding more technologies
+              eg: JavaScript, DataStructure, Algorithmes, and more!`
+            },
+            {
+              title: 'Who we are?',
+              content: `TechView is an Open-Source Project, available for anyone to add more questions, edit existing ones, or even add new technologies!`
+            },
+          ]}
+          layout='twoColumn'
+        />
+      </Container>
     );
 
     const Showcase = () => {
@@ -197,12 +248,12 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
-          <LearnHow />
+          <Information />
+          <Team />
+          {/* <LearnHow />
           <TryOut />
-          <Description />
-          <Showcase />
+          <Description /> 
+          <Showcase />*/}
         </div>
       </div>
     );

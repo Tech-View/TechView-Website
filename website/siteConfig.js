@@ -20,62 +20,76 @@ const users = [
   },
 ];
 
-const siteConfig = {
+// Parse Yaml
+const parseYaml = require("js-yaml").safeLoad;
+const path = require("path");
+const fs = require("fs");
+const url = require("url");
 
+function loadYaml(fsPath) {
+  return parseYaml(fs.readFileSync(path.join(__dirname, fsPath), "utf8"));
+};
+// move to website/data later
+const team = loadYaml("./data/team.yml");
+
+const siteConfig = {
+  team,
+  // Used for publishing and more
+  // For top-level user or org sites, the organization is still the same.
+  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
+  // matches organization username
+  organizationName: 'Tech-View',
+  // matches project repo
+  projectName: 'TechView-Website',
   title: 'TechView', // Title for your website.
   tagline: 'Technical Interview Questions & Answers',
-  url: 'https://techview.dev', // Your website URL
-
-  baseUrl: '/', // Base URL for your project */
+  // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
+  url: 'https://techview.dev', // Your website URL
+  baseUrl: '/', 
 
-  // Used for publishing and more
-  projectName: 'TechView',
-  organizationName: 'TechView',
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
+  // remove the title from header logo
+  disableHeaderTitle : true,
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'react-basics', label: 'React'},
-    //{doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {href: "https://github.com/Tech-View/TechView-Website", label: "GitHub"},
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/logo_icon.svg',
-  footerIcon: 'img/logo_icon.svg',
+  headerIcon: 'img/techView200_100.png',
+  footerIcon: 'img/logo_icon-gold.svg',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#786602',
-    secondaryColor: '#544701',
+    primaryColor: '#313538',
+    secondaryColor: '#FACD00',
+    whiteColor: '#fff'
   },
 
   /* Custom fonts for website */
-  /*
   fonts: {
-    myFont: [
-      "Times New Roman",
+    primaryFont: [
+      "Raleway",
       "Serif"
     ],
-    myOtherFont: [
+    secondaryFont: [
       "-apple-system",
       "system-ui"
     ]
   },
-  */
-
+  
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} TechView`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -91,22 +105,14 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/undraw_online.svg',
+  ogImage: 'img/og_image.png',
   twitterImage: 'img/undraw_tweetstorm.svg',
 
-  // For sites with a sizable amount of content, set collapsible to true.
-  // Expand/collapse the links and subcategories under categories.
-  // docsSideNavCollapsible: true,
-
   // Show documentation's last contributor's name.
-  // enableUpdateBy: true,
+  enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
-
-  // You may provide arbitrary config keys to be used as needed by your
-  // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  enableUpdateTime: true
 };
 
 module.exports = siteConfig;
